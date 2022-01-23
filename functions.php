@@ -34,7 +34,7 @@ add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
 /**
- * Банеры
+ * Банеры правые
  */
 require 'inc/baners.php';
 
@@ -76,5 +76,10 @@ function ds1_register_main_menu_sidebar_widgets(){
 	) );
 }
 add_action( 'widgets_init', 'ds1_register_main_menu_sidebar_widgets' );
+
+/**
+ * Банер госуслуги
+ */
+require 'inc/gosuslugi.php';
 
 ?>
