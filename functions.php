@@ -82,4 +82,9 @@ add_action( 'widgets_init', 'ds1_register_main_menu_sidebar_widgets' );
  */
 require 'inc/gosuslugi.php';
 
+/**
+ * Яндекс карты
+ */
+require 'inc/yandexmap.php';
+
 ?>

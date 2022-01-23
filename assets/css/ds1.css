@@ -49,6 +49,18 @@
   margin-bottom: 30px;
 }
 
+/*Яндекс карты*/
+.ds1_yandexmap {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.yandexmap {
+  width: 100%;
+  height: 95%;
+}
+
 /* fix */
 .sidebar-top {
   padding: 15px 30px;
