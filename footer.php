@@ -149,6 +149,16 @@
             <?php endif; ?>
           </div>
 
+          <div class="grid one-half last">
+          <p style="text-transform:none;text-align: right;">
+          Разработка и техническая поддержка сайта
+            <a style="color: white;text-decoration:underline;" href="http://vandraren.ru/">
+             VANDRAREN
+            </a>
+            - разработка веб-проектов
+          </p>
+          </div>  
+
         </div><!--/.hu-pad-->
 
       </div><!--/.container-inner-->

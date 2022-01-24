@@ -7,22 +7,59 @@
 }
 
 .ds1_baner-img {
-  width: 40%;
+  width: 35%;
   height: 100px;
   float: left;
   padding: 5px;
 }
 
 .ds1_baner-img img {
-  width: 100%;
+  width: 85%;
   height: 90%;
 }
 
 .ds1_baner-text {
-  width: 48%;
+  width: 55%;
   height: 100px;
   padding: 5px;
   float: left;
+}
+
+.ds1_baner-text h6 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Банеры правые*/
+.ds1_baner2 {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.ds1_baner-img2 {
+  width: 40%;
+  height: 100px;
+  float: left;
+  padding: 5px;
+}
+
+.ds1_baner-img2 img {
+  width: 85%;
+  height: 90%;
+}
+
+.ds1_baner-text2 {
+  width: 50%;
+  height: 100px;
+  padding: 5px;
+  float: left;
+}
+
+.ds1_baner-text2 h6 {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .ds1-chif {

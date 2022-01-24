@@ -1,19 +1,19 @@
 <?php
 /**
- * Банеры левые
+ * Банеры правые
  */
 defined( 'ABSPATH' ) || exit;
 
-class banersWidget extends WP_Widget {
+class rightbanersWidget extends WP_Widget {
  
 	/*
 	 * создание виджета
 	 */
 	function __construct() {
 		parent::__construct(
-			'baner', 
-			'Банеры ', // заголовок виджета
-			array( 'description' => 'Добавляет в левый сайтбар банер, изображение, текст и ссылку' ) 
+			'baner2', 
+			'Банеры  правые ', // заголовок виджета
+			array( 'description' => 'Добавляет в правый сайтбар банер, изображение, текст и ссылку' ) 
 		);
 	}
  
@@ -23,13 +23,13 @@ class banersWidget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		?>
         <a href="<?php echo esc_url($instance['url']);?>" target="blank">
-        <div class="ds1_baner">
+        <div class="ds1_baner2">
 
-            <div class="ds1_baner-img">
+            <div class="ds1_baner-img2">
                 <img src="<?php echo esc_url($instance['img']);?>" alt="">
             </div> 
 
-            <div class="ds1_baner-text">           
+            <div class="ds1_baner-text2">           
                 <h6><?php echo __( $instance['title'], 'teh');?></h6>
             </div> 
         </div>
@@ -85,9 +85,9 @@ class banersWidget extends WP_Widget {
 /*
  * регистрация виджета
  */
-function baners_widget_load() {
-	register_widget( 'banersWidget' );
+function right_baners_widget_load() {
+	register_widget( 'rightbanersWidget' );
 }
-add_action( 'widgets_init', 'baners_widget_load' );
+add_action( 'widgets_init', 'right_baners_widget_load' );
 
 ?>

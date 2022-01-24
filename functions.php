@@ -34,9 +34,14 @@ add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
 /**
- * Банеры правые
+ * Банеры левые
  */
 require 'inc/baners.php';
+
+/**
+ * Банеры правые
+ */
+require 'inc/baners2.php';
 
 /**
  * Изменение в коде ,Юлок на новости. Взято с файла functions/init-title
