@@ -61,7 +61,7 @@ function ds1_hu_blog_title() {
   }
 
   /**
- * Заведующая
+ * Заведующий
  * 
  */
 require 'inc/chif.php';
@@ -91,5 +91,42 @@ require 'inc/gosuslugi.php';
  * Яндекс карты
  */
 require 'inc/yandexmap.php';
+
+/**
+ * Блок объявления
+ */
+require 'inc/top_info.php';
+
+/**
+ * Логотип и описание
+ */
+
+if ( !function_exists( 'ds1_print_logo_or_title' ) ) {
+    function ds1_print_logo_or_title( $echo = true, $is_mobile_menu = false ) {
+        // June 2020 => never write the mobile site-title in a h1 heading to avoid multiple h1 detected by SEO analyzers
+        // @see https://github.com/presscustomizr/hueman/issues/906
+        // option "wrap_in_h_one" should applyg when home is a static page or the blog page
+        // When home is a static page, the blog page heading should be set to H1 ( see parts\page-title.php )
+        $wrap_in_h_one = hu_is_real_home() && !$is_mobile_menu && hu_booleanize_checkbox_val( hu_get_option('wrap_in_h_one') );
+        $logo_or_title = hu_get_logo_title( $is_mobile_menu );
+        // => If no logo is set and  !hu_is_checked( 'display-header-title' ), the logo title is empty.
+        ob_start();
+            do_action( '__before_logo_or_site_title', $logo_or_title );
+            if ( !empty( $logo_or_title ) ) {
+                // added january 2020 for https://github.com/presscustomizr/hueman/issues/844
+                echo $wrap_in_h_one ? '<h1 class="site-title">' : '<p class="site-title">';
+                ?>
+                  <?php hu_do_render_logo_site_tite( $logo_or_title ) ?>
+                <?php
+                echo $wrap_in_h_one ? '</h1>' : '</p>';
+            }
+            do_action( '__after_logo_or_site_title', $logo_or_title );
+        $html = ob_get_clean();
+        if ( $echo )
+          echo apply_filters('hu_logo_title', $html );
+        else
+          return apply_filters('hu_logo_title', $html );
+    }
+} 
 
 ?>

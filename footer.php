@@ -112,7 +112,7 @@
             <?php endif; ?>
 
             <div id="copyright">
-                <p><?php echo apply_filters('hu_parse_template_tags', wp_kses_post( hu_get_option( 'copyright' ) ) ); ?></p>
+                <p style="text-transform:none;text-align: left;color:#fff;"><?php echo apply_filters('hu_parse_template_tags', wp_kses_post( hu_get_option( 'copyright' ) ) ); ?></p>
             </div><!--/#copyright-->
 
             <?php if ( hu_is_checked( 'credit' ) || hu_is_customizing() ) : ?>
@@ -138,7 +138,7 @@
               <?php else : //if not customizing, display an empty p for design purposes ?>
                   <?php if ( hu_user_can_see_customize_notices_on_front() ) : ?>
                       <?php
-                        printf( '<p style="text-transform:none;text-align: right;">%1$s. <br/><a style="color: white;text-decoration:underline;" href="%2$s" title="%3$s">%3$s &raquo;</a></p>',
+                        printf( '<p style="text-transform:none;text-align: right;color:#fff;">%1$s. <br/><a style="color: white;text-decoration:underline;" href="%2$s" title="%3$s">%3$s &raquo;</a></p>',
                             __('You can set your social links here from the live customizer', 'hueman'),
                             admin_url( 'customize.php?autofocus[section]=social_links_sec' ),
                             __('Customize now', 'hueman')
@@ -150,7 +150,7 @@
           </div>
 
           <div class="grid one-half last">
-          <p style="text-transform:none;text-align: right;">
+          <p style="text-transform:none;text-align: right;color:#fff;">
           Разработка и техническая поддержка сайта
             <a style="color: white;text-decoration:underline;" href="http://vandraren.ru/">
              VANDRAREN

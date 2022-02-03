@@ -4,6 +4,7 @@
   height: 100px;
   margin-bottom: 10px;
   border-radius: 5px;
+  border: 1px dotted #0192dc;
 }
 
 .ds1_baner-img {
@@ -28,6 +29,7 @@
 .ds1_baner-text h6 {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.55;
 }
 
 /* Банеры правые*/
@@ -36,6 +38,7 @@
   height: 100px;
   margin-bottom: 10px;
   border-radius: 5px;
+  border: 1px dotted #0192dc;
 }
 
 .ds1_baner-img2 {
@@ -60,6 +63,7 @@
 .ds1_baner-text2 h6 {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.35;
 }
 
 .ds1-chif {
@@ -96,6 +100,20 @@
 .yandexmap {
   width: 100%;
   height: 95%;
+}
+
+/*Для блока объявления*/
+
+.ds1_top_info {
+  width: 95%;
+  min-height: 200px;
+  border: 1px dotted #0192dc;
+  padding: 20px;
+  margin: 40px auto 40px auto;
+}
+
+.ds1_top_info h1 {
+  text-align: center;
 }
 
 /* fix */
